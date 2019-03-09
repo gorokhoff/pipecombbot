@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Редактор Spyder
-
-Это временный скриптовый файл.
-"""
-
 import telebot
 import parser
 TOKEN = "662334318:AAFPlvmFmZhl13GWHIuPSHHq2YNG9-t2dTM"
@@ -14,8 +7,8 @@ def start_handler(message):
     global isRunning
     if not isRunning:
         chat_id = message.chat.id
-        text = message.text
-        msg = bot.send_message(chat_id, 'Сколько вам лет?')
+#        text = message.text
+#        msg = bot.send_message(chat_id, 'Сколько вам лет?')
         isRunning = True    
 
 @bot.message_handler(content_types=['text'])
