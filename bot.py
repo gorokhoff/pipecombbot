@@ -1,6 +1,6 @@
 import telebot
 import parser
-TOKEN = "662334318:AAFPlvmFmZhl13GWHIuPSHHq2YNG9-t2dTM"
+TOKEN = ""
 bot = telebot.TeleBot(TOKEN)
 @bot.message_handler(commands=['start', 'go'])
 def start_handler(message):
@@ -19,6 +19,8 @@ def text_handler(message):
         bot.send_message(chat_id, 'Привет, я бот - парсер хабра.')
     elif text == "как дела?":
         bot.send_message(chat_id, 'Хорошо, а у тебя?')
-    else:
+    elif text == "bip":
+        bot.send_message(chat_id, 'bop')
+	else:
         bot.send_message(chat_id, 'Простите, я вам не понял :(')
 bot.polling()
